@@ -1,0 +1,27 @@
+body {
+    background: linear-gradient(
+        135deg,
+        #f8d7da,
+        #fff5f7
+    );
+    min-height: 100vh;
+    font-family: "Georgia", serif;
+}
+
+.card {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn.btn-primary {
+    background: #d63384;
+    border: none;
+}
+
+.btn.btn-primary:hover {
+    background: #b02a6f;
+}
