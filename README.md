@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# Wedding RSVP System 💍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Wedding RSVP Management System built with React, TypeScript, Node.js, Express, and MongoDB.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Guest RSVP Form
+* Groom's Side & Bride's Side Selection
+* Relationship Selection
+* Attendance Confirmation
+* Meal Preference Selection
+* Personalized Messages
+* Admin Login Dashboard
+* View All RSVPs
+* Delete RSVPs
+* RSVP Statistics
 
-## React Compiler
+## Admin Access
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The application includes an admin dashboard for viewing RSVP statistics and managing guest responses.
 
-## Expanding the ESLint configuration
+Admin authentication is currently implemented for development purposes and should be replaced with a secure authentication system before production deployment.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Frontend
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* React
+* TypeScript
+* Vite
+* Bootstrap
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+
+## Installation
+
+### Frontend
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Backend
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd server
+npm install
+node server.js
 ```
+
+## API Endpoints
+
+| Method | Endpoint  | Description         |
+| ------ | --------- | ------------------- |
+| POST   | /rsvp     | Create RSVP         |
+| GET    | /rsvps    | Get all RSVPs       |
+| GET    | /stats    | Get RSVP statistics |
+| DELETE | /rsvp/:id | Delete RSVP         |
+
+## Author
+
+Diane Umulisa
